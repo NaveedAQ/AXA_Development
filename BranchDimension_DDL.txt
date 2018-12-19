@@ -1,0 +1,23 @@
+-- Branch Dim
+CREATE EXTERNAL TABLE IF NOT EXISTS BR_DIM (
+		BR_DK INT  ,
+		BR_BK VARCHAR(500) ,
+		BR_CD VARCHAR(80) ,
+		BR_DESCR VARCHAR(250),
+		BR_CNTRY VARCHAR(80) ,
+		BR_CRT_TS VARCHAR(80) ,
+		VLD_FM_TS Timestamp  ,
+		VLD_TO_TS Timestamp ,
+		CRN_IND INT ,
+		EFF_FM_DT Timestamp ,
+		EFF_TO_DT Timestamp ,
+		LOAD_INFO_DK INT,
+		LGL_OWN_CD_DK INT ,
+		SRC_CD_DK INT ,
+		ISRT_TS Timestamp,
+		UDT_TS Timestamp ,
+		UDT_BY_USR_DK INT ,
+		CRT_BY_USR_DK INT 
+	)
+STORED AS PARQUET
+LOCATION '/user/Axa-Datalake/refined_zone/branch' ;
